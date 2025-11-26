@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { register, login, logout, refresh, getMe } from './auth.controller';
+import { register, login, refresh, getMe } from './auth.controller';
 import { requireAuth } from '../../middleware/auth';
 const router = Router();
 console.log('✅ Auth routes loaded');

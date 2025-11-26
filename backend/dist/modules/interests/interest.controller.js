@@ -1,6 +1,5 @@
 import { Interest } from './interest.model';
 import { Property } from '../properties/property.model';
-import { User } from '../users/user.model';
 // 🧍‍♂️ Client: express interest in a property
 export const expressInterest = async (req, res) => {
     try {

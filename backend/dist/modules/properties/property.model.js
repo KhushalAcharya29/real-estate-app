@@ -1,4 +1,4 @@
-import { Schema, model, Types } from 'mongoose';
+import { Schema, model } from 'mongoose';
 const locationSchema = new Schema({
     address: { type: String },
     city: { type: String },
