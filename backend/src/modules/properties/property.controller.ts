@@ -1,5 +1,5 @@
 import type { Request, Response } from 'express';
-import { Property } from './property.model';
+import { Property } from './property.model.js';
 
 // 📍 Public: list properties with filters
 export const listProperties = async (req: Request, res: Response) => {

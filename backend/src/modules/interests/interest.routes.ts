@@ -4,8 +4,8 @@ import {
   getMyInterests,
   removeInterest,
   getInterestedClients,
-} from './interest.controller';
-import { requireAuth, requireRole } from '../../middleware/auth';
+} from './interest.controller.js';
+import { requireAuth, requireRole } from '../../middleware/auth.js';
 
 const router = Router();
 

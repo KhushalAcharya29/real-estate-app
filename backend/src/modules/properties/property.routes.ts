@@ -6,8 +6,8 @@ import {
   updateProperty,
   deleteProperty,
   getAgentProperties,
-} from './property.controller';
-import { requireAuth, requireRole } from '../../middleware/auth';
+} from './property.controller.js';
+import { requireAuth, requireRole } from '../../middleware/auth.js';
 
 const router = Router();
 

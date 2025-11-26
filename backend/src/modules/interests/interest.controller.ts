@@ -1,7 +1,7 @@
 import type { Request, Response } from 'express';
-import { Interest } from './interest.model';
-import { Property } from '../properties/property.model';
-import { User } from '../users/user.model';
+import { Interest } from './interest.model.js';
+import { Property } from '../properties/property.model.js';
+import { User } from '../users/user.model.js';
 
 // 🧍‍♂️ Client: express interest in a property
 export const expressInterest = async (req: Request, res: Response) => {

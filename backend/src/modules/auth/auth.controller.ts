@@ -1,6 +1,6 @@
 import type { Request, Response } from 'express';
-import { User } from '../users/user.model';
-import { hashPassword, verifyPassword } from '../../utils/passwords';
+import { User } from '../users/user.model.js';
+import { hashPassword, verifyPassword } from '../../utils/passwords.js';
 import { signTokens, setAuthCookies, clearAuthCookies, verifyRefreshToken } from '../../utils/jwt';
 
 
