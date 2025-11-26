@@ -11,6 +11,11 @@ import interestRoutes from "./modules/interests/interest.routes.js";
 
 const app = express();
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://real-estate-app-1-gbzy.onrender.com", // 👈 your Render frontend domain here
+];
+
 // --- Security & Core Middleware ---
 app.use(helmet());
 app.use(cors({ origin: ENV.CORS_ORIGIN, credentials: true }));
