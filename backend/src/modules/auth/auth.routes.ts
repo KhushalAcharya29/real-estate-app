@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { register, login, logout, refresh, getMe } from './auth.controller';
+import { register, login, logout, refresh, getMe } from './auth.controller.js';
 import { requireAuth } from '../../middleware/auth';
 
 
