@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import type { Request, Response } from 'express';
 import { Interest } from './interest.model';
 import { Property } from '../properties/property.model';
 import { User } from '../users/user.model';

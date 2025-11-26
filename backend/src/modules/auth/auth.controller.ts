@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import type { Request, Response } from 'express';
 import { User } from '../users/user.model';
 import { hashPassword, verifyPassword } from '../../utils/passwords';
 import { signTokens, setAuthCookies, clearAuthCookies, verifyRefreshToken } from '../../utils/jwt';

@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import type { Request, Response } from 'express';
 import { Property } from './property.model';
 
 // 📍 Public: list properties with filters
