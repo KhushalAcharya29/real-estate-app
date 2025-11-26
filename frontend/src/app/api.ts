@@ -56,9 +56,10 @@ export interface Interest {
 export const api = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:5000/api/v1',
-    credentials: 'include', // send cookies automatically
-  }),
+  baseUrl: import.meta.env.VITE_API_BASE_URL,
+  credentials: 'include', // send cookies automatically
+}),
+
   tagTypes: ['Auth', 'Property', 'Interest'],
 
   endpoints: (builder) => ({
