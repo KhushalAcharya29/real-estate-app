@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsc && cd ../frontend && npm run build",
+    "build": "tsc",
     "start": "node dist/server.js",
     "test": "jest"
   },
