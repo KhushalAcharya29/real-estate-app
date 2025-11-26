@@ -14,23 +14,25 @@ const app = express();
 // --- Security & Core Middleware ---
 app.use(helmet());
 
-// FIX: Allow both Localhost (for testing) AND Render (for production)
+// 1️⃣ Define your allowed origins
 const allowedOrigins = [
-  "http://localhost:5173",
-  "https://real-estate-app-dopm.onrender.com" // Ensure this matches your deployed frontend URL exactly
+  "http://localhost:5173", // For local development
+  "https://real-estate-app-1-gbzy.onrender.com" // 👈 YOUR FRONTEND URL
 ];
 
+// 2️⃣ FIX: Use the array to validate origin dynamically
 app.use(cors({
   origin: (origin, callback) => {
     // Allow requests with no origin (like mobile apps or curl requests)
     if (!origin) return callback(null, true);
+    
     if (allowedOrigins.indexOf(origin) === -1) {
       const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
       return callback(new Error(msg), false);
     }
     return callback(null, true);
   },
-  credentials: true 
+  credentials: true // This allows cookies/sessions to work
 }));
 
 app.use(express.json());
