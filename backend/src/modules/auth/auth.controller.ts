@@ -1,7 +1,7 @@
 import type { Request, Response } from 'express';
 import { User } from '../users/user.model.js';
 import { hashPassword, verifyPassword } from '../../utils/passwords.js';
-import { signTokens, setAuthCookies, clearAuthCookies, verifyRefreshToken } from '../../utils/jwt';
+import { signTokens, setAuthCookies, clearAuthCookies, verifyRefreshToken } from '../../utils/jwt.js';
 
 
 export const register = async (req: Request, res: Response) => {
