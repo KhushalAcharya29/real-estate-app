@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsc && npx tsc-alias",
+    "build": "tsc && node scripts/postbuild-fix.js",
     "start": "node dist/server.js",
     "test": "jest"
   },
